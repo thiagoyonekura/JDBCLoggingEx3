@@ -40,9 +40,9 @@ public class BancoDados implements InterfaceBancoDados {
 			Statement statement = conexao.createStatement();
             ResultSet resultSet = statement.executeQuery(db_query);
             while (resultSet.next()) {
-                System.out.println(" | Id: " + resultSet.getInt("id") + " | Nome: " + resultSet.getString("nome") + " | Email: " + resultSet.getString("email"));
-                meuLogger.logger.info("Consulta no BD realizada com sucesso!");
+                System.out.println(" | Id: " + resultSet.getInt("id") + " | Nome: " + resultSet.getString("nome") + " | Email: " + resultSet.getString("email"));  
             }
+            meuLogger.logger.info("Consulta no BD realizada com sucesso!");
             resultSet.close();
             statement.close();
         } catch (SQLException e) {
